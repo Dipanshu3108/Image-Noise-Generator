@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_index.css">
+    <script src="script.js", type="module"></script>
+    <script src="noises.js", type="module"></script>
+    <title>Image Processor</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Image Processor</h1>
+            <p class="description">Upload an image and apply various noise effects to transform your images</p>
+        </header>
+
+        <div class="image-processing-section">
+            <div class="image-box">
+                
+                <div class="preview-box" id="previewBox">
+                    <div class="upload-content" id="uploadContent">
+                        <p>Drag & drop an image or</p>
+                        <input type="file" id="imageInput" accept="image/*">
+                        <label for="imageInput" class="upload-button">Choose File</label>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <div class="center-controls">
+                <button id="processBtn">Process Image</button>
+                <button id="downloadBtn">Download</button>
+                <button id="removeImage" class="remove-image">Remove Image</button>
+            </div>
+
+            <div class="image-box">
+                <div class="output-box" id="outputBox">
+                    <p>Processed image will appear here</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="noise-options">
+            <h3>Select Noise Effect</h3>
+            <ul class="noise-list" id="noiseList">
+                <li id="gaussianNoise" data-noise="gaussian">Gaussian Noise</li>
+                <li id="uniformNoise" data-noise="uniform">Uniform Noise</li>
+                <li id="exponentialNoise" data-noise="exponential">Exponential Noise</li>
+                <li id="gammaNoise" data-noise="gamma">Gamma Noise</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    
+</body>
+</html>
